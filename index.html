@@ -5,11 +5,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="https://col-css.netlify.app/css/column.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/col.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <section class="hero">
+    <header class="hero__header site-header">
+      <div class="container">
+        <div class="row between align-center">
+          <a class="site-header__logo-link" href="#">
+            <img class="site-header__logo" src="img/logo.svg" alt="logo">
+          </a>
+          <nav class="site-nav ">
+            <ul class="nav-list">
+              <li class="nav-item nav-item--active"><a href="#" class="nav-link">Product</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Customers</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+              <li class="nav-item nav-item__sign"><a href="#" class="nav-link btn">Sign in</a></li>
+              <li class="nav-item nav-item__sign"><a href="#" class="nav-link btn btn__green">Sign Up</a></li>
+              <li class="nav-item nav-item__btn"><button type="button"><img src="img/frame-btn.svg" alt="light-darkbtn"></button></li>
+            </ul>
+          </nav>
+          <div class="site-menu">
+            <button class="site-menu__btn"><i class='bx bx-menu'></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero-content">
+      <div class="container">
+        <div class="row align-center between hero-content--flex">
+          <div class="col-xs-12 col-lg-5">
+            <h2 class="hero__title">Work at the speed of thought</h2>
+            <p class="hero__text">Tools, tutorials, design and innovation experts, all in one place! The most intuitive way to imagine your next user experience.</p>
+            <ul class="btn-list">
+              <li class="btn-item"><a class="btn__link btn btn__green" href="#">Get started</a></li>
+              <li class="btn-item"><a class="btn__link watch-video" href="#"><i class='bx bx-play'></i> <span class="watch-video--line"> Watch the Video</span></a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-lg-7  hero__right">
+            <img class="hero__img" src="img/amico-hero.svg" alt="hero-amico">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
   <script src="js/main.js"></script>
 </body>
 </html>

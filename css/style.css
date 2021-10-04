@@ -6,6 +6,14 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #fff;
+  --text-color: #3d2a22;
+  --item-btn-color: #f3f3f3;
 }
 
 body {
@@ -14,11 +22,243 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #fff;
-  font-family: sans-serif;
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  max-width: 1170px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  background-color: #fff;
+}
+.site-header {
+  padding: 20px 0;
+}
+
+.site-header__logo {
+  width: 185px;
+  height: 45px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+.nav-item:not(:last-child) {
+  margin-right: 24px;
+}
+.nav-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--text-color);
+}
+
+.nav-item--active .nav-link {
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: #000;
+}
+.nav-item__sign .nav-link{
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+.nav-item__sign .nav-link {
+  font-weight: bold;
+}
+
+.btn {
+  border: 1px solid;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  border-color: #bcd0e5;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+
+.btn__green,
+.btn:hover {
+  border-color: #02897a;
+  background-color:#02897a;
+  color: #fff;
+}
+
+
+
+.btn__green:hover {
+  border: 1px solid #bcd0e5;
+  background-color:transparent;
+  color: var(--text-color);
+}
+.nav-item__btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--item-btn-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.site-menu {
+  display: none;
+}
+.hero-content{
+  padding: 25px 0;
+}
+
+.hero__title {
+  width: 458px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--text-color);
+  margin-bottom: 14px;
+}
+.hero__text {
+  width: 458px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color);
+  margin-bottom: 45px;
+}
+.btn-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.site-menu__btn {
+  cursor: pointer;
+}
+.btn-item:not(:last-child) {
+  margin-right: 30px;
+}
+.btn-item:nth-child(1) .btn__link  {
+  padding: 14px 40px;
+  font-weight: bold;
+}
+.watch-video {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  color: #02897a;
+}
+.bx-play {
+  font-size: 30px;
+}
+.watch-video--line {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.hero__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__img {
+  max-width: 100%;
+  height: 555px;
+}
+
+@media screen and (max-width: 992px) {
+  .site-nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: #01ac98;
+    transform: translateX(100%);
+    transition:transform 0.4s ease ;
+  }
+  .show {
+    transform: translateX(0%);
+  }
+  .nav-list {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .nav-link {
+    font-size: 25px;
+    display: inline-block;
+    color: #fff;
+  }
+
+  .site-menu {
+    display: block;
+    position: relative;
+    z-index: 99;
+  }
+
+  .site-menu__btn {
+    display: block;
+    font-size: 35px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .hero-content--flex {
+    flex-direction: column-reverse;
+  }
+
+  .hero__img {
+    max-width: 338px;
+    height: 310px;
+  }
+
+  .hero__title {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .hero__text {
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-item:nth-child(1) .btn__link  {
+    padding: 15px 25px;
+  }
+  .btn-list {
+    justify-content: center;
+  }
 }
